@@ -1,3 +1,5 @@
 alias cu="composer update"
 alias ci="composer install"
+alias c="composer"
 alias s="php app.php"
+alias ch="chmod 777 -R /app"

@@ -15,28 +15,11 @@ class User
 {
     /** @psalm-suppress PropertyNotSetInConstructor */
     #[Column(type: 'primary')]
-    private int $id;
+    public int $id;
 
     public function __construct(
         #[Column(type: 'string')]
-        private string $username,
-        #[Column(type: 'string')]
-        private string $email,
+        public string $username
     ) {
-    }
-
-    public function getId(): int
-    {
-        return $this->id;
-    }
-
-    public function getUsername(): string
-    {
-        return $this->username;
-    }
-
-    public function getEmail(): string
-    {
-        return $this->email;
     }
 }
