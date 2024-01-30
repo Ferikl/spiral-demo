@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spiral-app
+    ports:
+      - "2222:8080"
+    volumes:
+        - ./:/app
+
+  db:
+    image: mariadb
+    container_name: spiral-db
+    platform: linux/x86_64
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "amber"
+      MYSQL_USER: "amber"
+      MYSQL_PASSWORD: "secret"
+    ports:
+      - "33333:3306"
+
