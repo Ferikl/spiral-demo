@@ -26,9 +26,10 @@
         "spiral-packages/scheduler": "^2.1"
     },
     "require-dev": {
+        "spiral-packages/database-seeder": "^3.2",
+        "spiral/dumper": "^3.2.1",
         "spiral/testing": "^2.3",
-        "vimeo/psalm": "^5.9",
-        "spiral/dumper": "^3.2.1"
+        "vimeo/psalm": "^5.9"
     },
     "autoload": {
         "psr-4": {

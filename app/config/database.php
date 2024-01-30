@@ -39,7 +39,7 @@ return [
      */
     'databases' => [
         'default' => [
-            'driver' => env('DB_CONNECTION', 'sqlite'),
+            'driver' => 'mysql',
         ],
     ],
 
@@ -50,21 +50,6 @@ return [
      * the driver class and its connection options.
      */
     'drivers' => [
-        'sqlite' => new Config\SQLiteDriverConfig(
-            connection: new Config\SQLite\MemoryConnectionConfig(),
-            queryCache: true
-        ),
-        'pgsql' => new Config\PostgresDriverConfig(
-            connection: new Config\Postgres\TcpConnectionConfig(
-                database: env('DB_DATABASE', 'spiral'),
-                host: env('DB_HOST', '127.0.0.1'),
-                port: (int)env('DB_PORT', 5432),
-                user: env('DB_USERNAME', 'postgres'),
-                password: env('DB_PASSWORD', ''),
-            ),
-            schema: 'public',
-            queryCache: true,
-        ),
         'mysql' => new Config\MySQLDriverConfig(
             connection: new Config\MySQL\TcpConnectionConfig(
                 database: env('DB_DATABASE', 'spiral'),
@@ -75,6 +60,5 @@ return [
             ),
             queryCache: true,
         ),
-        // ...
     ],
 ];

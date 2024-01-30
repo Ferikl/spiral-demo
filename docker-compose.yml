@@ -18,9 +18,18 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: "root"
-      MYSQL_DATABASE: "amber"
-      MYSQL_USER: "amber"
+      MYSQL_DATABASE: "spiral"
+      MYSQL_USER: "spiral"
       MYSQL_PASSWORD: "secret"
     ports:
       - "33333:3306"
 
+  rtc-buggregator:
+    container_name: rtc-buggregator
+    image: ghcr.io/buggregator/server:latest
+    restart: always
+    ports:
+      - 9912:9912
+      - 2223:8000
+    logging:
+      driver: none
