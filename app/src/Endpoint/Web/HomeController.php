@@ -7,6 +7,7 @@ namespace App\Endpoint\Web;
 use Exception;
 use Spiral\Prototype\Traits\PrototypeTrait;
 use Spiral\Router\Annotation\Route;
+use Spiral\Views\ViewInterface;
 
 /**
  * Simple home page controller. It renders home page template and also provides
@@ -20,10 +21,10 @@ final class HomeController
      */
     use PrototypeTrait;
 
-
     #[Route(route: '/', name: 'index')]
     public function index(): string
     {
+        dump($this->views);
         return $this->views->render('home');
     }
 

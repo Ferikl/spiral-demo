@@ -21,6 +21,7 @@ use Spiral\Queue\Bootloader\QueueBootloader;
 use Spiral\RoadRunnerBridge\Bootloader as RoadRunnerBridge;
 use Spiral\Scaffolder\Bootloader\ScaffolderBootloader;
 use Spiral\Scheduler\Bootloader\SchedulerBootloader;
+use Spiral\Sentry\Bootloader\SentryReporterBootloader;
 use Spiral\Tokenizer\Bootloader\TokenizerListenerBootloader;
 use Spiral\Validation\Bootloader\ValidationBootloader;
 use Spiral\Validator\Bootloader\ValidatorBootloader;
@@ -123,6 +124,8 @@ class Kernel extends \Spiral\Framework\Kernel
 
             // Configure route groups, middleware for route groups
             Bootloader\RoutesBootloader::class,
+
+            SentryReporterBootloader::class,
         ];
     }
 
