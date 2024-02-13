@@ -24,8 +24,8 @@ services:
     ports:
       - "33333:3306"
 
-  rtc-buggregator:
-    container_name: rtc-buggregator
+  buggregator:
+    container_name: buggregator
     image: ghcr.io/buggregator/server:latest
     restart: always
     ports:
