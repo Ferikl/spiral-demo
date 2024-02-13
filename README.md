@@ -17,7 +17,7 @@ Main goal is to try ise RR+Spiral in temrs of:
 
 inside app container:
 - run `source .profile` to get all aliases
-
+- run `cf` to fix code style
 ## Endpoints
 - api: http://localhost:2222/
 - buggregator to trace errors|dumps: http://localhost:2223/

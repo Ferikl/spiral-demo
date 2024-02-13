@@ -20,10 +20,7 @@ class Message
     public function __construct(
         #[Column(type: 'string')]
         public string $message,
-
         #[BelongsTo(target: User::class, nullable: false)]
         public User $user,
-    )
-    {
-    }
+    ) {}
 }

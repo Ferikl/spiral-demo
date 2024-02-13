@@ -6,6 +6,4 @@ namespace App\Infrastructure\Persistence;
 
 use Cycle\ORM\Select\Repository;
 
-class MessageRepository extends Repository
-{
-}
+class MessageRepository extends Repository {}

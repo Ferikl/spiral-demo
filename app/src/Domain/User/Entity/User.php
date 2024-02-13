@@ -20,6 +20,5 @@ class User
     public function __construct(
         #[Column(type: 'string')]
         public string $username
-    ) {
-    }
+    ) {}
 }

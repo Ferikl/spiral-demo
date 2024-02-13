@@ -13,7 +13,7 @@ return (new PhpCsFixer\Config())
         '@PER-CS' => true,
         '@PER-CS2.0' => true,
         '@PHP83Migration' => true,
-        '@Symfony' => true,
+        //'@Symfony' => true,
     ])
     ->setFinder($finder)
     ;

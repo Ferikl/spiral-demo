@@ -16,8 +16,7 @@ class UuidTypecast implements CastableInterface, UncastableInterface
 
     public function __construct(
         private readonly DatabaseInterface $database
-    ) {
-    }
+    ) {}
 
     public function setRules(array $rules): array
     {
