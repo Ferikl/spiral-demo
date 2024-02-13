@@ -27,6 +27,7 @@
         "spiral/views": "^3.8"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.49",
         "spiral-packages/database-seeder": "^3.2",
         "spiral/dumper": "^3.2.1",
         "spiral/testing": "^2.3",
